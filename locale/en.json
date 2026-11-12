@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Memory probe",
+    "description": "Writes one observation per turn, with memory search, wake-up context, daily/weekly/monthly summaries, and a Memory tab in the conversation view."
+  }
+}

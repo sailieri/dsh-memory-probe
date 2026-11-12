@@ -1,0 +1,4 @@
+# Memory probe: per-turn observations, memory tools, and the Memory tab.
+- insert:
+    - id: memory-probe
+      name: dsh-memory-probe

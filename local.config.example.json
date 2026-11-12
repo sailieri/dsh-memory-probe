@@ -1,0 +1,23 @@
+{
+  "_comment": "复制为 local.config.json 后填写；查找顺序与字段说明见 README。",
+  "llm": {
+    "enabled": true,
+    "baseUrl": "",
+    "model": "",
+    "keyEnv": "",
+    "secretsFile": "",
+    "timeoutMs": 120000
+  },
+  "embed": {
+    "enabled": true,
+    "url": "",
+    "model": "",
+    "timeoutMs": 20000
+  },
+  "search": {
+    "minSim": 0.2
+  },
+  "jieba": {
+    "modulePaths": []
+  }
+}

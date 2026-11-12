@@ -1,0 +1,65 @@
+{
+  "name": "dsh-memory-probe",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Per-turn memory observations for dsh: memory tools, daily/weekly/monthly summaries, and a Memory tab in the conversation view",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sailieri/dsh-memory-probe.git"
+  },
+  "homepage": "https://github.com/sailieri/dsh-memory-probe#readme",
+  "bugs": {
+    "url": "https://github.com/sailieri/dsh-memory-probe/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "long-term-memory",
+    "observations",
+    "sqlite",
+    "fts5",
+    "embedding",
+    "rag"
+  ],
+  "icon": "./icon.svg",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/*.js",
+    "cordis.patch.yml",
+    "local.config.example.json",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": "^0.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@node-rs/jieba": "^1.10.4"
+  }
+}
