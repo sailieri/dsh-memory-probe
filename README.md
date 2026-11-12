@@ -13,17 +13,27 @@
 
 ## 安装
 
-作为 bundle 安装（推荐，会同时写入 profile 的 bundle 层）：
+先装 dsh。它的所有版本都是预发布号，裸写包名会报 `ETARGET`，必须带版本：
 
 ```bash
-# npm
-plugin_manager install_bundle target="dsh-memory-probe"
+npm i -g @deepseek-ai/dsh@0.2.2-rc.1   # 裸写 @deepseek-ai/dsh 会失败：No matching version found for @*.
+```
 
-# 或直接从 GitHub
+再从 GitHub 装插件（一步完成三件事：写入 profile 依赖、把插件追加到 `bundles` 层、装好 node_modules）：
+
+```bash
+dsh plugin --profile web add git+https://github.com/sailieri/dsh-memory-probe.git
+```
+
+装完重启 `dsh web` 即生效——包内的 `cordis.patch.yml` 会被 profile 的 bundle 层自动加载，不需要手改配置。
+
+也可以让已经在跑的 dsh 会话替你装（走内建插件管理器）：
+
+```bash
 plugin_manager install_bundle target="git+https://github.com/sailieri/dsh-memory-probe.git"
 ```
 
-手动安装（不经 bundle 机制）：
+手动安装（不经 bundle 机制，需要自己往 `cordis.patch.yml` 里加一行）：
 
 ```bash
 # 1) 加依赖

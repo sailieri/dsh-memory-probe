@@ -1,6 +1,6 @@
 {
   "name": "dsh-memory-probe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Per-turn memory observations for dsh: memory tools, daily/weekly/monthly summaries, and a Memory tab in the conversation view",
   "repository": {
@@ -53,7 +53,7 @@
     }
   },
   "engines": {
-    "dsh": "^0.2.0"
+    "dsh": ">=0.2.0-0"
   },
   "publishConfig": {
     "access": "public"
