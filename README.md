@@ -80,7 +80,7 @@ pnpm add -C ~/.dsh/profiles/web dsh-memory-probe
 
 ## 依赖
 
-- dsh `^0.2.0`（见 `engines.dsh`）
+- dsh `>=0.2.0-0`（见 `engines.dsh`）。dsh 目前只发布预发布版本，`^0.2.0` 按严格 semver 不匹配 `0.2.2-rc.1`
 - Node 版本由 dsh 决定；插件本身使用 `node:sqlite` 与 `node:zstd`，需要 Node ≥ 22.5
 - `@node-rs/jieba`（随包依赖，用于中文分词 + FTS5）
 - 可选：embedding 服务（`data[0].embedding` 与 `embeddings[0]` 两种响应均支持）、任意 OpenAI 兼容推理服务（观察生成）
